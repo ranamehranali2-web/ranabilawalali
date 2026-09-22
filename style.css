@@ -1,0 +1,3454 @@
+/* ================= GENERAL RESET ================= */
+
+* {
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+html,
+body {
+    width: 100%;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+/* ================= HEADER SECTION ================= */
+
+/* ================= NAVBAR ================= */
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 75px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 0 50px;
+
+    background: transparent;
+    transition: 0.4s ease;
+
+    z-index: 1000;
+}
+
+#navbar.scrolled {
+    background: rgba(189, 202, 200, 0.95);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(10px);
+}
+
+/* Logo */
+.logo {
+    color: blue;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Desktop Menu */
+.nav-links {
+    position: absolute;
+    left: 60%;
+    transform: translateX(-50%);
+
+    display: flex;
+    gap: 40px;
+
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    color: black;
+    text-decoration: none;
+    font-size: 17px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #467ed2;
+}
+
+/* Hamburger */
+.menu-icon {
+    display: none;
+    color: #3546b7;
+    font-size: 30px;
+    cursor: pointer;
+
+    margin-left: auto;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+
+    #navbar {
+        padding: 0 25px;
+    }
+
+    /* Right side icon */
+    .menu-icon {
+        display: block;
+        margin-left: auto;
+        z-index: 1002;
+    }
+
+    /* Right side menu */
+    .nav-links {
+        position: fixed;
+
+        top: 0;
+        right: -300px;
+        left: auto;
+
+        width: 280px;
+        height: 100vh;
+
+        transform: none;
+
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+
+        gap: 0;
+
+        padding-top: 90px;
+
+        background: rgba(140, 157, 154, 0.95);
+
+        box-shadow: -5px 0 20px rgba(0, 0, 0, 0.3);
+
+        transition: right 0.4s ease;
+
+        opacity: 1;
+        visibility: visible;
+    }
+
+    /* Open from right */
+    .nav-links.active {
+        right: 0;
+    }
+     .social-aa1{
+     margin-top: 300px;
+     }
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a {
+        display: block;
+        width: 100%;
+        padding: 18px 30px;
+
+        font-size: 18px;
+    }
+
+    .nav-links a:hover {
+        background: rgba(255, 255, 255, 0.1);
+    }
+    
+}
+
+/* ================= LOGO ================= */
+
+.logo p {
+font-size: 24px;
+font-weight: 700;
+color: #38bdf8;
+    
+}
+
+
+/* ================= MENU ================= */
+
+.menu {
+display: flex;
+align-items: center;
+gap: 30px;
+}
+
+.menu a {
+color: #e5e7eb;
+text-decoration: none;
+font-size: 16px;
+font-weight: 500;
+transition: color 0.5s ease;
+}
+
+.menu a:hover {
+color: #38bdf8;
+}
+
+/* ================= my name folder ======================================================== */
+.header-section{
+max-width: 100%;
+height:100vh;
+background-color: #F7F7F7;
+
+}
+.header-section {
+    position: relative;
+    min-height: 100vh;
+    overflow: hidden;
+
+    background:
+        radial-gradient(circle at 80% 30%,
+        rgba(48, 68, 184, 0.15),
+        transparent 30%),
+
+        radial-gradient(circle at 20% 70%,
+        rgba(0, 180, 255, 0.10),
+        transparent 30%),
+
+        #f7f7f7;
+}
+.intro-card {
+    background: rgba(255, 255, 255, 0.65);
+    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+
+    border: 1px solid rgba(255, 255, 255, 0.8);
+
+    box-shadow:
+        0 20px 50px rgba(48, 68, 184, 0.12);
+
+    transition: 0.4s ease;
+}
+
+.intro-card:hover {
+    transform: translateY(-8px);
+    box-shadow:
+        0 25px 60px rgba(48, 68, 184, 0.20);
+}
+.tech-icon {
+    transition: 0.4s ease;
+
+    box-shadow:
+        0 0 0 rgba(48, 68, 184, 0.2),
+        0 15px 35px rgba(0, 0, 0, 0.10);
+}
+
+.tech-icon:hover {
+    transform: scale(1.12);
+    box-shadow:
+        0 0 30px rgba(48, 68, 184, 0.35),
+        0 20px 45px rgba(0, 0, 0, 0.15);
+}
+.header-section img{
+width: 100%;
+height: 90vh;
+}
+.intro-card {   
+margin-left: 230px;
+margin-top: 150px;
+position: absolute;
+width: 250px;
+height: 100px;
+display: flex;
+align-items: center;    
+background-color: #FBFBFB;
+padding-left: 10px;
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(50, 70, 100, 0.08);
+z-index: 5;
+}
+.intro-card-1{
+width: 230px;
+height: 80px;
+position: absolute;
+background-color: #fff;
+margin-top: -390px;
+margin-left: 230px;
+border-radius: 10px;
+}
+.intro-card-1 span {
+font-size: 16px;
+font-weight: 600;
+font-family: Arial, Helvetica, sans-serif;
+margin-left: 20px;
+
+
+}
+.intro-card-1 h1{
+margin-top: 10px;
+color: #3044b8;
+}
+/* ================= INTRO CARDS RESPONSIVE ================= */
+
+/* =================================================
+   ATTRACTIVE HEADER - RESPONSIVE
+   ================================================= */
+
+/* ================= TABLET ================= */
+@media (max-width: 1000px) {
+
+    .header-section {
+        width: 100%;
+        min-height: 100vh;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Intro Card */
+    .intro-card {
+        left: 8%;
+        margin-left: 0;
+        margin-top: 150px;
+        width: 220px;
+        height: 90px;
+    }
+
+    /* Second Card */
+    .intro-card-1 {
+        left: 8%;
+        margin-left: 0;
+        margin-top: -330px;
+        width: 200px;
+        height: 75px;
+    }
+
+    /* Role */
+    .role-card {
+        left: 8%;
+        top: 300px;
+        width: 220px;
+        height: 95px;
+    }
+
+    /* Icons */
+    .tech-icon {
+        width: 100px;
+        height: 100px;
+    }
+
+    .tech-icon i {
+        font-size: 50px;
+    }
+
+    .icon-one {
+        top: 18%;
+        right: 15%;
+    }
+
+    .icon-two {
+        top: 40%;
+        right: 10%;
+    }
+
+    .icon-three {
+        top: 62%;
+        right: 15%;
+    }
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .header-section {
+        width: 100%;
+        min-height: 700px;
+        height: auto;
+        position: relative;
+        overflow: hidden;
+
+        background:
+            radial-gradient(
+                circle at 80% 25%,
+                rgba(48, 68, 184, 0.14),
+                transparent 35%
+            ),
+            radial-gradient(
+                circle at 20% 70%,
+                rgba(0, 180, 255, 0.10),
+                transparent 35%
+            ),
+            #f7f7f7;
+    }
+
+    .header-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+
+    /* ================= INTRO CARD ================= */
+
+    .intro-card {
+        position: absolute;
+
+        left: 30%;
+        top: 100px;
+
+        margin: 0;
+        transform: translateX(-50%);
+        cursor: pointer;
+        width: 200px;
+        height: 80px;
+
+        padding-left: 10px;
+
+        border-radius: 16px;
+
+        background: rgba(255, 255, 255, 0.70);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(255, 255, 255, 0.8);
+
+        box-shadow:
+            0 15px 40px rgba(48, 68, 184, 0.12);
+    }
+
+
+    .wave {
+        font-size: 30px;
+    }
+
+
+    .intro-text span {
+        font-size: 12px;
+        
+    }
+
+
+    .intro-text h1 {
+        font-size: 17px;
+        margin-top: 7px;
+        
+    }
+
+
+    /* ================= SECOND CARD ================= */
+
+    .intro-card-1 {
+        position: absolute;
+
+        left: 20%;
+        top: 305px;
+
+        margin: 0;
+        transform: translateX(-50%);
+
+        width: 180px;
+        height: 70px;
+
+        border-radius: 12px;
+
+        background: rgba(255, 255, 255, 0.75);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(255, 255, 255, 0.8);
+
+        box-shadow:
+            0 15px 35px rgba(48, 68, 184, 0.10);
+    }
+
+
+    .intro-card-1 span {
+        font-size: 13px;
+        margin-left: 12px;
+    }
+
+
+    .intro-card-1 h1 {
+        font-size: 17px;
+        margin-top: 7px;
+    }
+
+
+    /* ================= ROLE CARD ================= */
+
+    .role-card {
+        position: absolute;
+
+        left: 50%;
+        top: 305px;
+
+        margin: 0;
+        transform: translateX(-50%);
+
+        width: 210px;
+        height: 80px;
+
+        padding-left: 20px;
+
+        border-radius: 16px;
+
+        background: rgba(255, 255, 255, 0.60);
+
+        backdrop-filter: blur(15px);
+        -webkit-backdrop-filter: blur(15px);
+
+        border: 1px solid rgba(255, 255, 255, 0.8);
+
+        box-shadow:
+            0 15px 40px rgba(48, 68, 184, 0.12);
+    }
+
+
+    .role-card span {
+        font-size: 17px;
+    }
+
+
+    /* ================= TECHNOLOGY ICONS ================= */
+
+    .tech-icon {
+        width: 75px;
+        height: 75px;
+
+        margin: 0;
+
+        box-shadow:
+            0 10px 30px rgba(0, 0, 0, 0.10);
+    }
+
+
+    .tech-icon i {
+        font-size: 38px;
+    }
+
+
+    .icon-one {
+        top: 55%;
+        left: 8%;
+        right: auto;
+    }
+
+
+    .icon-two {
+        top: 68%;
+        left: 50%;
+        right: auto;
+
+        transform: translateX(-50%);
+    }
+
+
+    .icon-three {
+        top: 55%;
+        right: 8%;
+    }
+
+
+    /* ================= SOCIAL ICONS ================= */
+
+    .social-links {
+        display: none;
+    }
+}
+
+
+/* ================= SMALL MOBILE ================= */
+
+@media (max-width: 480px) {
+
+    .header-section {
+        min-height: 650px;
+    }
+
+
+    .intro-card {
+        top: 75px;
+        width: 175px;
+        height: 70px;
+    }
+
+
+    .wave {
+        font-size: 26px;
+    }
+
+
+    .intro-text span {
+        font-size: 11px;
+    }
+
+
+    .intro-text h1 {
+        font-size: 15px;
+      
+    }
+
+
+    .intro-card-1 {
+        top: 175px;
+        width: 155px;
+        height: 62px;
+        
+    }
+
+
+    .intro-card-1 span {
+        font-size: 11px;
+    }
+
+
+    .intro-card-1 h1 {
+        font-size: 15px;
+    }
+
+
+    .role-card {
+        top: 260px;
+        width: 180px;
+        height: 70px;
+    }
+
+
+    .role-card span {
+        font-size: 15px;
+    }
+
+
+    /* Icons */
+
+    .tech-icon {
+        width: 62px;
+        height: 62px;
+    }
+
+
+    .tech-icon i {
+        font-size: 31px;
+    }
+
+
+    .icon-one {
+        top: 55%;
+        left: 6%;
+    }
+
+
+    .icon-two {
+        top: 66%;
+    }
+
+
+    .icon-three {
+        top: 55%;
+        right: 6%;
+    }
+}
+
+
+/* ================= VERY SMALL MOBILE ================= */
+
+@media (max-width: 360px) {
+
+    .header-section {
+        min-height: 620px;
+    }
+
+
+    .intro-card {
+        top: 65px;
+        width: 160px;
+        height: 65px;
+    }
+
+
+    .intro-card-1 {
+        top: 155px;
+        width: 145px;
+        height: 58px;
+    }
+
+
+    .role-card {
+        top: 235px;
+        width: 165px;
+        height: 65px;
+    }
+
+
+    .role-card span {
+        font-size: 14px;
+    }
+
+
+    .tech-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+
+    .tech-icon i {
+        font-size: 27px;
+    }
+
+
+    .icon-one {
+        left: 5%;
+    }
+
+
+    .icon-three {
+        right: 5%;
+    }
+}
+/*  =============================hand animation ======================== */
+.wave {
+font-size: 40px;
+
+animation: waveHand 2s infinite;
+}
+@keyframes waveHand {
+    0%, 100% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(15deg);
+    }
+    75% {
+        transform: rotate(-10deg);
+    }
+}
+/* =============names on web develpor============== */
+
+.role-card {
+position: absolute;
+top: 300px;
+left: 16.5%;
+width: 250px;
+height: 105px;
+display: flex;
+align-items: center;
+padding-left: 40px;
+background: rgba(255, 255, 255, 0.42);
+border-radius: 20px;
+box-shadow: 0 10px 30px rgba(50, 70, 100, 0.07);
+    
+}
+
+.role-card span {
+color: #3044b8;
+font-size: 20px;
+font-weight: 700;
+font-family: Arial, Helvetica, sans-serif;
+transition: opacity 0.6s ease;
+}
+
+/* ==========icon rotate============  */
+
+.tech-icon {
+position: absolute;
+margin-top: 100px;
+width: 125px;
+height: 125px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background-color:#263244;
+box-shadow: 0 10px 30px rgba(50, 70, 100, 0.1);
+z-index: 5;
+/* Floating + Rotating Animation */
+animation: iconFloatRotate 5s ease-in-out infinite;
+}
+
+/* Icon */
+.tech-icon i {
+font-size: 65px;
+/* Icon khud halka rotate hoga */
+animation: iconRotate 8s linear infinite;
+}
+
+/* Top Icon */
+.icon-one {
+top: 5%;
+right: 17%;
+animation-delay: 0s;
+color: red;
+}
+
+/* Middle Icon */
+.icon-two {
+top: 26%;
+right: 14%;
+animation-delay: 1s;
+color: rgb(13, 171, 223);
+}
+
+/* Bottom Icon */
+.icon-three {
+top: 47%;
+right: 17%;
+animation-delay: 2s;
+color: yellow;
+}
+/* =========================================
+   TECHNOLOGY ICONS RESPONSIVE
+   ========================================= */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1000px) {
+
+    .tech-icon {
+        width: 105px;
+        height: 105px;
+        margin-top: 0;
+        
+    }
+
+    .tech-icon i {
+        font-size: 52px;
+    }
+
+    .icon-one {
+        top: 12%;
+        right: 12%;
+    }
+
+    .icon-two {
+        top: 35%;
+        right: 8%;
+    }
+
+    .icon-three {
+        top: 58%;
+        right: 12%;
+    }
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 768px) {
+
+    .tech-icon {
+        width: 80px;
+        height: 80px;
+        margin-top: 0;
+
+        border-radius: 50%;
+
+        box-shadow:
+            0 10px 30px rgba(50, 70, 100, 0.12);
+    }
+
+    .tech-icon i {
+        font-size: 40px;
+    }
+
+    /* Top */
+    .icon-one {
+        top: 55%;
+        left: 8%;
+        right: auto;
+    }
+
+    /* Middle */
+    .icon-two {
+        top: 68%;
+        left: 50%;
+        right: auto;
+        transform: translateX(-50%);
+    }
+
+    /* Bottom */
+    .icon-three {
+        top: 55%;
+        right: 8%;
+    }
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 480px) {
+
+    .tech-icon {
+        width: 65px;
+        height: 65px;
+    }
+
+    .tech-icon i {
+        font-size: 32px;
+    }
+
+    .icon-one {
+        top: 55%;
+        left: 6%;
+    }
+
+    .icon-two {
+        top: 66%;
+    }
+
+    .icon-three {
+        top: 55%;
+        right: 6%;
+    }
+}
+
+
+/* ---------- VERY SMALL MOBILE ---------- */
+@media (max-width: 360px) {
+
+    .tech-icon {
+        width: 55px;
+        height: 55px;
+    }
+
+    .tech-icon i {
+        font-size: 27px;
+    }
+
+    .icon-one {
+        left: 5%;
+    }
+
+    .icon-three {
+        right: 5%;
+    }
+}
+/* ================= FLOAT + ROTATE ================= */
+
+@keyframes iconFloatRotate {
+
+    0% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    25% {
+        transform: translateY(-10px) rotate(4deg);
+    }
+
+    50% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+    75% {
+        transform: translateY(10px) rotate(-4deg);
+    }
+
+    100% {
+        transform: translateY(0) rotate(0deg);
+    }
+
+}
+
+/* ================= ICON ROTATION ================= */
+
+@keyframes iconRotate {
+
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+
+}
+.forth-1section-icon{
+position: absolute;
+right: 1520px;
+margin-top: 500px;
+}
+/* ================social link=================== */
+.social-links {
+position: absolute;
+left: 22px;
+bottom: 60px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+z-index: 10;
+}
+.social-links a {
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: white;
+color: #68758b;
+font-size: 21px;
+text-decoration: none;
+box-shadow: 0 4px 12px rgba(50, 70, 100, 0.08);
+transition: 0.3s ease;
+}
+.social-links a:hover {
+background: #3545b8;
+color: white;
+transform: translateX(6px);
+}
+@media (max-width: 600px) {
+    .social-links {
+        display: none;
+    }
+    
+    .wave{
+    font-size: 30px;
+    right: 30px;
+    }
+    .intro-text span{
+     color: #718096;
+     
+    }
+    .intro-text h1{
+      /* color:#3044b8; */
+      color: #3048bd;
+      font-size: 15px;
+      margin-top: 10px;
+      
+    }
+    .header-section img{
+    height: 100vh;
+    }
+     .header-section {
+    height: 140vh;
+     }
+   
+}
+
+
+
+.control-icon{
+position: absolute;
+
+margin-top: 970px;
+}
+.controlsocial-icon{
+position: absolute;
+right: 960px;
+margin-top: 490px;
+}
+
+/* =====================================================
+   FIRST SECTION RESPONSIVE
+   ===================================================== */
+
+/* ================= TABLET ================= */
+@media (max-width: 1000px) {
+
+    .header-section {
+        width: 100%;
+        height: 100vh;
+        min-height: 650px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Intro Card */
+    
+
+    /* Role Card */
+    .role-card {
+        top: 300px;
+        left: 8%;
+        width: 230px;
+        height: 100px;
+    }
+
+    /* Technology Icons */
+    
+
+    .icon-one {
+        top: 18%;
+        right: 15%;
+    }
+
+    .icon-two {
+        top: 40%;
+        right: 10%;
+    }
+
+    .icon-three {
+        top: 62%;
+        right: 15%;
+    }
+
+    /* Social */
+    
+}
+
+
+/* ================= MOBILE ================= */
+@media (max-width: 768px) {
+
+    .header-section {
+        width: 100%;
+        height: 100vh;
+        min-height: 650px;
+        position: relative;
+        overflow: hidden;
+    }
+
+    .header-section img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    /* Intro Card */
+    
+
+    /* Wave */
+    .wave {
+        font-size: 30px;
+    }
+
+    /* Intro Text */
+    .intro-text span {
+        font-size: 13px;
+    }
+
+    .intro-text h1 {
+        font-size: 17px;
+        margin-top: 8px;
+    }
+
+    /* Second Card */
+    
+
+    /* Role Card */
+    .role-card {
+        left: 50%;
+        top: 350px;
+        transform: translateX(-50%);
+        margin: 0;
+        width: 210px;
+        height: 85px;
+        padding-left: 20px;
+        border-radius: 15px;
+    }
+
+    .role-card span {
+        font-size: 17px;
+    }
+
+    /* Technology Icons */
+   
+
+    
+
+    /* Top */
+    .icon-one {
+        top: 55%;
+        right: auto;
+        left: 10%;
+    }
+
+    /* Middle */
+    .icon-two {
+        top: 67%;
+        right: auto;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    /* Bottom */
+    .icon-three {
+        top: 55%;
+        right: 10%;
+    }
+
+    /* Social Links */
+   
+}
+
+
+/* ================= SMALL MOBILE ================= */
+@media (max-width: 480px) {
+
+    .header-section {
+        min-height: 620px;
+    }
+
+    
+
+    .wave {
+        font-size: 25px;
+    }
+
+    .intro-text span {
+        font-size: 11px;
+    }
+
+    .intro-text h1 {
+        font-size: 15px;
+    }
+
+
+    .role-card {
+        top: 305px;
+        width: 180px;
+        height: 70px;
+    }
+
+    .role-card span {
+        font-size: 15px;
+    }
+
+    /* Icons */
+   
+
+    .icon-one {
+        top: 55%;
+        left: 7%;
+    }
+
+    .icon-two {
+        top: 65%;
+    }
+
+    .icon-three {
+        top: 55%;
+        right: 7%;
+    }
+
+}
+
+
+/* ================= VERY SMALL MOBILE ================= */
+@media (max-width: 360px) {
+
+    
+
+    .role-card {
+        top: 280px;
+        width: 165px;
+    }
+
+    .role-card span {
+        font-size: 14px;
+    }
+
+    
+
+    
+}
+
+/* ============SECOND SECTION ========================================================================================== */
+
+.second-section{
+background-color:#fff;
+
+}
+.container{
+    
+text-align:center;
+justify-content:center
+}
+.container h2{
+    
+font-size:50px;
+font-weight:700;
+font-family:Arial, Helvetica, sans-serif;
+}
+.container-1{
+padding-top: 40px;
+}
+.container i{
+color:blue;
+font-size:50px;
+font-weight:700;
+font-family:Arial, Helvetica, sans-serif;
+}
+/* ============ABOUT SECTION ============ */
+.about-section{
+position: relative;
+width:100%;
+}
+.about-section h1{
+position:absolute;
+width:700px;
+margin-left: 150px;
+margin-top:60px;
+font-size:30px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 600;
+justify-content:center;
+letter-spacing: 1px;
+}
+.about-section p{
+position:absolute;
+width:700px;
+margin-left: 150px;
+margin-top:140px;
+font-size:20px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 500;
+justify-content:center;
+letter-spacing: 1px;
+}
+.about-section i{
+ color:blue;
+}
+/* ============CV BUTTON ============ */
+.cv-button{
+position:absolute;
+margin-left:150px;
+margin-top:340px;
+}
+.cv-button button{
+width:130px;
+height:70px;
+border-radius: 15px;
+font-size:20px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 500;
+background-color:#fff;
+border:1px solid blue;
+color:blue;
+}
+.cv-button :hover{
+background-color: #263244;
+color: #fff;
+cursor:pointer;
+}
+/* ============MY PHOTO ============ */
+.my-photo{
+margin-left:1100px;
+margin-top:100px;
+}
+.my-photo img{
+width: 250px;
+height: 300px;
+border-radius: 20px;
+margin-top: 130px;
+}
+/* ============forth-sectin ============ */
+
+/* =========================================
+   EXPERIENCE SECTION
+========================================= */
+
+.exprence-sectin {
+    width: 90%;
+    max-width: 1150px;
+
+    margin: 100px auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 55px;
+
+    align-items: start;
+}
+
+
+/* =========================================
+   ALL SECTIONS
+========================================= */
+
+.first-sectin,
+.section-sectin,
+.third-sectin,
+.forth-sectin {
+
+    width: 100%;
+
+    position: relative;
+
+    transition:
+        transform 0.5s ease,
+        opacity 0.5s ease;
+}
+
+
+/* =========================================
+   IMAGE BOX
+========================================= */
+
+.first-sectin-1,
+.section-sectin-1,
+.third-sectin-1,
+.forth-sectin-1 {
+
+    width: 100%;
+    height: 215px;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+
+    margin-bottom: 25px;
+}
+
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.first-sectin-1 img,
+.section-sectin-1 img,
+.third-sectin-1 img,
+.forth-sectin-1 img {
+
+    width: 100%;
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+    transition:
+        transform 0.6s ease,
+        filter 0.6s ease;
+}
+
+
+/* =========================================
+   IMAGE HOVER
+========================================= */
+
+.first-sectin:hover img,
+.section-sectin:hover img,
+.third-sectin:hover img,
+.forth-sectin:hover img {
+
+    transform: scale(1.08);
+
+}
+
+
+/* =========================================
+   CARD HOVER
+========================================= */
+
+.first-sectin:hover {
+    transform: translateY(-10px);
+}
+
+.section-sectin:hover {
+    transform: translateY(-14px);
+}
+
+.third-sectin:hover {
+    transform: translateY(-8px);
+}
+
+.forth-sectin:hover {
+    transform: translateY(-12px);
+}
+
+
+/* =========================================
+   HEADING
+========================================= */
+
+.first-sectin-2 h1,
+.section-sectin-2 h1,
+.third-sectin-2 h1,
+.forth-sectin-2 h1 {
+
+    margin: 0 0 12px;
+
+    color: #111;
+
+    font-size: 21px;
+
+    font-weight: 700;
+
+    line-height: 1.3;
+
+    transition:
+        color 0.4s ease,
+        transform 0.4s ease;
+}
+
+
+/* =========================================
+   HEADING HOVER
+========================================= */
+
+.first-sectin:hover h1 {
+    transform: translateX(5px);
+}
+
+.section-sectin:hover h1 {
+    transform: translateX(5px);
+}
+
+.third-sectin:hover h1 {
+    transform: translateX(5px);
+}
+
+.forth-sectin:hover h1 {
+    transform: translateX(5px);
+}
+
+
+/* =========================================
+   PARAGRAPH
+========================================= */
+
+.first-sectin-2 p,
+.section-sectin-2 p,
+.third-sectin-2 p,
+.forth-sectin-2 p {
+
+    margin: 0;
+
+    color: #707b91;
+
+    font-size: 16px;
+
+    font-weight: 600;
+
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   DIFFERENT ENTRANCE ANIMATIONS
+========================================= */
+
+.first-sectin {
+    animation: firstCard 0.8s ease forwards;
+}
+
+.section-sectin {
+    animation: secondCard 0.9s ease forwards;
+}
+
+.third-sectin {
+    animation: thirdCard 1s ease forwards;
+}
+
+.forth-sectin {
+    animation: fourthCard 1.1s ease forwards;
+}
+
+
+/* =========================================
+   CARD 1
+========================================= */
+
+@keyframes firstCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CARD 2
+========================================= */
+
+@keyframes secondCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(70px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CARD 3
+========================================= */
+
+@keyframes thirdCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(90px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   CARD 4
+========================================= */
+
+@keyframes fourthCard {
+
+    from {
+        opacity: 0;
+        transform: translateY(110px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}
+
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media (max-width: 1100px) {
+
+    .exprence-sectin {
+
+        width: 90%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 50px 40px;
+    }
+
+
+    .first-sectin-1,
+    .section-sectin-1,
+    .third-sectin-1,
+    .forth-sectin-1 {
+
+        height: 230px;
+    }
+
+}
+
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 768px) {
+
+    .exprence-sectin {
+
+        width: 88%;
+
+        grid-template-columns: repeat(2, 1fr);
+
+        gap: 45px 25px;
+
+        margin: 80px auto;
+    }
+
+
+    .first-sectin-1,
+    .section-sectin-1,
+    .third-sectin-1,
+    .forth-sectin-1 {
+
+        height: 200px;
+
+        margin-bottom: 18px;
+
+        border-radius: 15px;
+    }
+
+
+    .first-sectin-2 h1,
+    .section-sectin-2 h1,
+    .third-sectin-2 h1,
+    .forth-sectin-2 h1 {
+
+        font-size: 19px;
+    }
+
+
+    .first-sectin-2 p,
+    .section-sectin-2 p,
+    .third-sectin-2 p,
+    .forth-sectin-2 p {
+
+        font-size: 14px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .exprence-sectin {
+
+        width: 88%;
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
+        margin-top: 750px;
+        
+    }
+
+
+    .first-sectin,
+    .section-sectin,
+    .third-sectin,
+    .forth-sectin {
+
+        width: 100%;
+    }
+
+
+    .first-sectin-1,
+    .section-sectin-1,
+    .third-sectin-1,
+    .forth-sectin-1 {
+
+        height: 240px;
+
+        border-radius: 18px;
+    }
+
+
+    .first-sectin-2 h1,
+    .section-sectin-2 h1,
+    .third-sectin-2 h1,
+    .forth-sectin-2 h1 {
+
+        font-size: 21px;
+    }
+
+
+    .first-sectin-2 p,
+    .section-sectin-2 p,
+    .third-sectin-2 p,
+    .forth-sectin-2 p {
+
+        font-size: 15px;
+
+        line-height: 1.6;
+    }
+
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .exprence-sectin {
+
+        width: 90%;
+
+        gap: 40px;
+    }
+
+
+    .first-sectin-1,
+    .section-sectin-1,
+    .third-sectin-1,
+    .forth-sectin-1 {
+
+        height: 200px;
+    }
+
+
+    .first-sectin-2 h1,
+    .section-sectin-2 h1,
+    .third-sectin-2 h1,
+    .forth-sectin-2 h1 {
+
+        font-size: 19px;
+    }
+
+
+    .first-sectin-2 p,
+    .section-sectin-2 p,
+    .third-sectin-2 p,
+    .forth-sectin-2 p {
+
+        font-size: 14px;
+    }
+
+}
+
+
+/* =========================================
+   VERY SMALL MOBILE
+========================================= */
+
+@media (max-width: 320px) {
+
+    .exprence-sectin {
+
+        width: 92%;
+    }
+
+
+    .first-sectin-1,
+    .section-sectin-1,
+    .third-sectin-1,
+    .forth-sectin-1 {
+
+        height: 180px;
+    }
+
+
+    .first-sectin-2 h1,
+    .section-sectin-2 h1,
+    .third-sectin-2 h1,
+    .forth-sectin-2 h1 {
+
+        font-size: 18px;
+    }
+
+
+    .first-sectin-2 p,
+    .section-sectin-2 p,
+    .third-sectin-2 p,
+    .forth-sectin-2 p {
+
+        font-size: 13px;
+    }
+
+}
+/* ========================================third section========================================= */
+/* ==============================
+   PORTFOLIO SECTION
+================================ */
+
+.portfolio-section {
+    width: 100%;
+    min-height: 160vh;
+    padding: 35px 5% 80px;
+
+    background: #b3b8bd;
+}
+
+
+/* ==============================
+   TITLE
+================================ */
+
+.portfolio-title {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.portfolio-title h2 {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    font-size: 50px;
+    font-weight: 700;
+    color: #050505;
+}
+.portfolio-title h2 span {
+    color: #3546b7;
+}
+
+
+/* ==============================
+   ALL BUTTON
+================================ */
+
+
+
+
+/* ==============================
+   CARDS WRAPPER
+================================ */
+
+.portfolio-wrapper {
+    position: relative;
+    max-width: 1400px;
+    margin-top: 50px;
+    margin-left: 100px;
+    
+}
+
+
+/* ==============================
+   CARD
+================================ */
+
+.portfolio-card {
+    position: absolute;
+    width: 320px;
+    height: 380px;
+    background: white;
+    border-radius: 20px;
+    overflow: visible;
+    box-shadow:0 8px 25px rgba(0, 0, 0, 0.08);
+    transition: 0.35s ease;
+
+}
+
+.portfolio-card:hover {
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 18px 40px rgba(0, 0, 0, 0.14);
+}
+/* ==============================
+   side change 
+================================ */
+.side-change{
+margin-left: 80px;
+}
+.side-change-1{
+margin-left: 430px;
+}
+.side-change-2{
+margin-left: 780px;
+}
+
+.side-change-4{
+margin-left: 80px;
+position: absolute;
+margin-top: 500px;
+
+}
+.side-change-5{
+margin-left: 430px;
+position: absolute;
+margin-top: 500px;
+
+}.side-change-6{
+margin-left: 780px;
+position: absolute;
+margin-top: 500px;
+
+}
+/* ==============================
+   IMAGE
+================================ */
+
+.portfolio-img {
+   width: 300px;
+   height: 250px;
+
+    padding: 20px 18px 0;
+  
+    overflow: hidden;
+
+    border-radius: 10px;
+}
+
+.portfolio-img img {
+    width: 300px;
+    height: 250px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 4px;
+
+    transition: 0.5s ease;
+}
+
+.portfolio-card:hover .portfolio-img img {
+    transform: scale(1.03);
+}
+
+
+/* ==============================
+   TECHNOLOGY BADGE
+================================ */
+
+.tech-badge {
+    position: relative;
+
+    width: fit-content;
+
+    margin: -23px auto 0;
+
+    padding: 12px 18px;
+
+    background: white;
+
+    color: #718096;
+
+    font-size: 21px;
+    font-weight: 500;
+
+    border-radius: 9px 9px 0 0;
+
+    z-index: 5;
+}
+
+
+/* ==============================
+   CARD CONTENT
+================================ */
+
+.portfolio-info {
+    text-align: center;
+
+    padding: 0 25px 30px;
+}
+
+.portfolio-info h3 {
+    margin: 7px 0 18px;
+
+    color: #080808;
+
+    font-size: 29px;
+    font-weight: 750;
+}
+
+.portfolio-info p {
+    margin: 0;
+
+    color: #718096;
+
+    font-size: 19px;
+    line-height: 1.5;
+
+    white-space: nowrap;
+
+    overflow: hidden;
+
+    text-overflow: ellipsis;
+}
+
+
+/* ==============================
+   TABLET
+================================ */
+
+@media (max-width: 1000px) {
+
+    .portfolio-title h2 {
+        font-size: 45px;
+    }
+
+    .portfolio-wrapper {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* ==============================
+   MOBILE
+================================ */
+
+@media (max-width: 650px) {
+
+    .portfolio-section {
+        padding: 45px 18px 60px;
+    }
+
+    .portfolio-title h2 {
+        font-size: 34px;
+    }
+
+   
+
+    .portfolio-wrapper {
+        grid-template-columns: 1fr;
+
+        margin-top: 35px;
+
+        gap: 25px;
+    }
+
+    .portfolio-img {
+        height: 100px;
+    }
+
+    .tech-badge {
+        font-size: 18px;
+    }
+
+    .portfolio-info h3 {
+        font-size: 26px;
+    }
+
+    .portfolio-info p {
+        font-size: 16px;
+    }
+}
+/* =========================
+   DARK OVERLAY
+========================= */
+
+.image-overlay {
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(81, 80, 80, 0.45);
+    margin-left: 12px;
+    opacity: 0;
+    height: 236px;
+    transition: 0.3s ease;
+    margin-right: 19px;
+    margin-top: 16px;
+    border-radius: 10px;
+}
+
+
+/* =========================
+   SHOW ON HOVER
+========================= */
+
+.portfolio-card:hover .image-overlay {
+    opacity: 1;
+}
+
+.portfolio-card:hover .portfolio-img img {
+    transform: scale(1.03);
+}
+
+/* =========================
+   EYE CIRCLE
+========================= */
+
+.eye-icon {
+    width: 40px;
+    height: 40px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background: #ffffff;
+
+    border-radius: 50%;
+
+    color: #111;
+
+    font-size: 17px;
+
+    box-shadow: 0 3px 12px rgba(0, 0, 0, 0.25);
+
+    transform: scale(0.7);
+
+    transition: 0.25s ease;
+}
+
+.portfolio-card:hover .eye-icon {
+    transform: scale(1);
+}
+
+/* =========================================
+   RESPONSIVE PORTFOLIO CARDS
+========================================= */
+
+/* ---------- TABLET ---------- */
+@media (max-width: 1000px) {
+
+    .portfolio-wrapper {
+        width: 100%;
+        max-width: 700px;
+        margin: 50px auto 0;
+        padding: 0 20px;
+
+        display: grid;
+        grid-template-columns: repeat(2, 320px);
+        justify-content: center;
+        gap: 40px 25px;
+    }
+
+    /* Remove old positioning */
+    .side-change,
+    .side-change-1,
+    .side-change-2,
+    .side-change-4,
+    .side-change-5,
+    .side-change-6 {
+        margin: 0;
+        position: relative;
+    }
+
+    .portfolio-card {
+        position: relative;
+        width: 320px;
+        height: 380px;
+    }
+
+}
+
+
+/* ---------- MOBILE ---------- */
+@media (max-width: 650px) {
+
+    .portfolio-wrapper {
+        width: 100%;
+        max-width: 100%;
+
+        margin: 35px auto 0;
+        padding: 0 15px;
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        gap: 30px;
+    }
+
+
+    /* Remove desktop positioning */
+    .side-change,
+    .side-change-1,
+    .side-change-2,
+    .side-change-4,
+    .side-change-5,
+    .side-change-6 {
+        width: 100%;
+        margin: 0;
+        position: relative;
+
+        display: flex;
+        justify-content: center;
+    }
+
+
+    /* CARD */
+    .portfolio-card {
+        position: relative;
+
+        width: 100%;
+        max-width: 320px;
+
+        height: auto;
+        min-height: 380px;
+
+        margin: 0 auto;
+    }
+
+
+    /* IMAGE CONTAINER */
+    .portfolio-img {
+        width: calc(100% - 36px);
+        height: 220px;
+
+        padding: 18px 18px 0;
+
+        margin: 0 auto;
+
+        box-sizing: content-box;
+    }
+
+
+    /* IMAGE */
+    .portfolio-img img {
+        width: 100%;
+        height: 220px;
+
+        object-fit: cover;
+    }
+
+
+    /* OVERLAY */
+    .image-overlay {
+        height: 207px;
+
+        top: 0;
+        left: 0;
+
+        margin-left: 18px;
+        margin-right: 18px;
+        margin-top: 15px;
+
+        width: calc(100% - 36px);
+
+        border-radius: 10px;
+    }
+
+
+    /* EYE */
+    .eye-icon {
+        width: 42px;
+        height: 42px;
+
+        font-size: 17px;
+    }
+
+
+    /* BADGE */
+    .tech-badge {
+        font-size: 17px;
+
+        padding: 10px 16px;
+
+        margin: -20px auto 0;
+
+        position: relative;
+        z-index: 5;
+    }
+
+
+    /* CARD CONTENT */
+    .portfolio-info {
+        padding: 0 20px 25px;
+    }
+
+
+    .portfolio-info h3 {
+        font-size: 25px;
+
+        margin: 7px 0 12px;
+    }
+
+
+    .portfolio-info p {
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        white-space: normal;
+
+        overflow: visible;
+
+        text-overflow: unset;
+    }
+
+}
+
+
+/* ---------- SMALL MOBILE ---------- */
+@media (max-width: 400px) {
+
+    .portfolio-wrapper {
+        padding: 0 10px;
+    }
+
+
+    .portfolio-card {
+        max-width: 300px;
+    }
+
+
+    .portfolio-img {
+        width: calc(100% - 30px);
+        height: 200px;
+
+        padding: 15px 15px 0;
+    }
+
+
+    .portfolio-img img {
+        height: 200px;
+    }
+
+
+    .image-overlay {
+        height: 187px;
+
+        margin-left: 15px;
+        margin-right: 15px;
+        margin-top: 12px;
+
+        width: calc(100% - 30px);
+    }
+
+
+    .portfolio-info {
+        padding: 0 15px 25px;
+    }
+
+
+    .portfolio-info h3 {
+        font-size: 23px;
+    }
+
+
+    .portfolio-info p {
+        font-size: 15px;
+    }
+
+
+    .tech-badge {
+        font-size: 16px;
+        padding: 9px 14px;
+    }
+
+}
+
+
+/* ==================---------==========================section  forth=======================--------=============-----======= */
+
+.testimonials-section {
+
+    width: 100%;
+    min-height: 130vh;
+
+    background: #fdf4f4;
+
+    padding: 45px 20px 80px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    overflow: hidden;
+
+}
+
+
+/* Main Heading */
+
+.testimonials-title {
+
+    font-family: Arial, sans-serif;
+
+    font-size: clamp(32px, 4vw, 64px);
+
+    font-weight: 700;
+
+    color: #000;
+
+    text-align: center;
+
+    margin: 0;
+
+    line-height: 1.2;
+
+}
+
+
+.testimonials-title span {
+
+    color: #3048bd;
+
+}
+
+
+/* Slider Container */
+
+.testimonial-slider {
+
+    position: relative;
+
+    width: min(875px, 100%);
+
+    min-height: 380px;
+
+    margin-top: 190px;
+
+}
+
+
+/* Review Card */
+
+.testimonial-card {
+
+    position: absolute;
+
+    inset: 0;
+
+    width: 100%;
+
+    min-height: 375px;
+
+    padding: 55px 65px;
+
+    background: #e1e2e7;
+
+    border-radius: 25px;
+
+    box-shadow: 0 8px 18px rgba(0, 0, 0, 0.18);
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 25px;
+
+    opacity: 0;
+
+    visibility: hidden;
+
+    transform: translateX(35px) scale(0.98);
+
+    transition:
+        opacity 0.7s ease,
+        transform 0.7s ease,
+        visibility 0.7s ease;
+
+}
+
+
+/* Active Review */
+
+.testimonial-card.active {
+
+    opacity: 1;
+
+    visibility: visible;
+
+    transform: translateX(0) scale(1);
+
+}
+
+
+/* Profile Image */
+
+.testimonial-image {
+
+    flex: 0 0 125px;
+
+    width: 125px;
+
+    height: 125px;
+
+    border-radius: 50%;
+
+    overflow: hidden;
+
+    border: 2px solid #000;
+
+    background: #ddd;
+
+}
+
+
+.testimonial-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* Review Content */
+
+.testimonial-content {
+
+    flex: 1;
+
+}
+
+
+.testimonial-content p {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 20px;
+
+    line-height: 1.25;
+
+    text-align: justify;
+
+    color: #000;
+
+    margin: 0 0 12px;
+
+}
+
+
+.testimonial-content h3 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 26px;
+
+    font-weight: 700;
+
+    color: #3048bd;
+
+    margin: 10px 0 12px;
+
+}
+
+
+.testimonial-content h4 {
+
+    font-family: Arial, sans-serif;
+
+    font-size: 23px;
+
+    font-weight: 400;
+
+    color: #999;
+
+    margin: 0;
+
+}
+
+
+/* Dots */
+
+.testimonial-dots {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    margin-top: 30px;
+
+}
+
+
+.testimonial-dot {
+
+    width: 11px;
+
+    height: 11px;
+
+    border-radius: 50%;
+
+    background: #c4c4c4;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+
+}
+
+
+.testimonial-dot.active {
+
+    width: 30px;
+
+    border-radius: 10px;
+
+    background: #3048bd;
+
+}
+
+
+/* Responsive Design */
+
+@media (max-width: 768px) {
+
+    .testimonials-section {
+        
+        padding: 35px 15px 60px;
+
+    }
+
+
+    .testimonials-title {
+
+        font-size: 36px;
+
+    }
+
+
+    .testimonial-slider {
+
+        min-height: 500px;
+
+        margin-top: 100px;
+
+    }
+
+
+    .testimonial-card {
+
+        min-height: 500px;
+
+        padding: 35px 25px;
+
+        flex-direction: column;
+
+        justify-content: center;
+
+        text-align: center;
+
+        gap: 20px;
+
+    }
+
+
+    .testimonial-image {
+
+        width: 115px;
+
+        height: 115px;
+
+        flex-basis: 115px;
+
+    }
+
+
+    .testimonial-content p {
+
+        font-size: 16px;
+
+        line-height: 1.5;
+
+        text-align: center;
+
+    }
+
+
+    .testimonial-content h3 {
+
+        font-size: 22px;
+
+    }
+
+
+    .testimonial-content h4 {
+
+        font-size: 18px;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .testimonials-title {
+
+        font-size: 30px;
+
+    }
+
+
+    .testimonial-slider {
+
+        min-height: 550px;
+
+        margin-top: 80px;
+
+    }
+
+
+    .testimonial-card {
+
+        min-height: 545px;
+
+        padding: 25px 18px;
+
+    }
+     .about-section{
+position: relative;
+width:80%;
+
+}
+
+
+
+
+}
+/* ==============last icon  ===================== */
+/* ================social link=================== */
+.mail-link-logo {
+position: absolute;
+left: 22px;
+bottom: 60px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+z-index: 10;
+}
+.mail-link-logo a {
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+background: black;
+color: #68758b;
+font-size: 21px;
+text-decoration: none;
+box-shadow: 0 4px 12px rgba(50, 70, 100, 0.08);
+transition: 0.3s ease;
+} */
+
+.mail-link-logo a:hover {
+background: #3545b8;
+color: white;
+transform: translateX(6px);
+}
+@media (max-width: 600px) {
+    .mail-link-logo {
+        left: 12px;
+        bottom: 25px;
+    }
+
+    .mail-link-logo a {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+} 
+/* =========================================================================five section ====================================== */
+/* =========================
+   CONTACT SECTION
+========================= */
+
+.contact-section {
+    width: 100%;
+    background: #EDF3F9;
+    padding: 70px 20px 80px;
+    box-sizing: border-box;
+}
+
+.contact-container {
+    width: 100%;
+    max-width: 1050px;
+    margin: 0 auto;
+}
+
+/* Heading */
+
+.contact-container h2 {
+    margin: 0 0 48px;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 42px;
+    font-weight: 700;
+    color: #050505;
+}
+
+.contact-container h2 span {
+    color: #3949ab;
+}
+@media (max-width: 600px) {
+   .container-1 h2{
+    font-size: 35px;
+   }
+   .container-1 i{
+    
+    font-size: 35px;
+   }
+  .about-section{
+position: relative;
+width:100%;
+}
+.about-section h1{
+position:absolute;
+width:700px;
+margin-left: 40px;
+margin-top:350px;
+font-size:30px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 600;
+justify-content:center;
+letter-spacing: 1px;
+}
+.about-section p{
+position:absolute;
+width:370px;
+margin-left: 40px;
+margin-top:420px;
+font-size:17px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 500;
+letter-spacing: 1px;
+margin-right: 40px;
+justify-content: center;
+}
+.about-section i{
+ color:blue;
+}
+.my-photo{
+margin-left:130px;
+position: absolute;
+top: -180px;
+}
+.my-photo img{
+width: 200px;
+height: 240px;
+border-radius: 20px;
+
+}
+.cv-button{
+position:absolute;
+margin-left:180px;
+margin-top:670px;
+}
+.cv-button button{
+width:100px;
+height:50px;
+border-radius: 15px;
+font-size:20px;
+font-family:Arial, Helvetica, sans-serif;
+font-weight: 500;
+background-color:#fff;
+border:1px solid blue;
+color:blue;
+}
+/* ============== cv button ============ */
+
+}
+
+/* Email + Phone */
+
+.contact-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 690px;
+    margin: 0 auto 47px;
+    gap: 30px;
+}
+
+.contact-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+
+    padding: 13px 18px;
+    border-radius: 5px;
+
+    text-decoration: none;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #687384;
+
+    transition: 0.3s ease;
+}
+
+.contact-box.email {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.contact-box.phone {
+    background: #fff;
+    border-radius: 10px;
+}
+
+.contact-box:hover {
+    transform: translateY(-2px);
+}
+
+.contact-box .icon {
+    font-size: 21px;
+}
+
+/* Form */
+
+#contactForm {
+    width: 100%;
+}
+
+#contactForm input,
+#contactForm textarea {
+    width: 100%;
+    box-sizing: border-box;
+
+    border: none;
+    outline: none;
+
+    background: #fff;
+    color: #333;
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 17px;
+
+    border-radius: 10px;
+
+    margin-bottom: 14px;
+}
+
+#contactForm input {
+    height: 46px;
+    padding: 0 10px;
+}
+
+#contactForm textarea {
+    height: 110px;
+    padding: 12px 10px;
+    resize: vertical;
+}
+
+#contactForm input::placeholder,
+#contactForm textarea::placeholder {
+    color: #73777d;
+    opacity: 1;
+}
+
+#contactForm textarea::placeholder {
+    font-size: 12px;
+}
+
+/* Button */
+
+#contactForm button {
+    display: block;
+
+    margin: 12px auto 0;
+
+    width: 140px;
+    height: 60px;
+
+    background: white;
+    color: #3949ab;
+
+    border: 2px solid #3949ab;
+    border-radius: 10px;
+
+    font-size: 15px;
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    transition: all 0.3s ease;
+}
+
+#contactForm button:hover {
+    background: #3949ab;
+    color: white;
+}
+
+/* Message */
+
+#formMessage {
+    text-align: center;
+    margin-top: 15px;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 14px;
+    color: #3949ab;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 700px) {
+
+    .contact-section {
+        
+        padding: 50px 18px 60px;
+    }
+
+    .contact-container h2 {
+        font-size: 30px;
+        margin-bottom: 35px;
+    }
+
+    .contact-info {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+    .contact-box {
+        width: 100%;
+        justify-content: center;
+        box-sizing: border-box;
+    }
+
+    #contactForm input {
+        height: 45px;
+    }
+
+    #contactForm textarea {
+        height: 120px;
+    }
+}
+
+/* =============last link========== */
+.last-cont-logo{
+width: 100%;
+background-color:#B3B8BD;
+height: 20vh;
+position: relative;
+border-radius: 10px;
+} 
+
+.last-icon-aa{
+padding-top: 50px;
+left: 22px;
+bottom: 60px;
+display: flex;
+flex-direction: column;
+gap: 12px;
+z-index: 10;
+}
+.last-icon-aa a {
+width: 50px;
+height: 50px;
+display: flex;
+align-items: center;
+justify-content: center;
+border-radius: 50%;
+border: 2px solid white;
+color: #fff;
+font-size: 21px;
+text-decoration: none;
+box-shadow: 0 4px 12px rgba(50, 70, 100, 0.08);
+transition: 0.3s ease;
+}
+.last-icon-aa a:hover {
+background: #fff;
+color: blue;
+transform: translateY(6px);
+}
+@media (max-width: 600px) {
+    .last-icon-aa {
+        left: 12px;
+        bottom: 25px;
+    }
+
+    .last-icon-aa a {
+        width: 42px;
+        height: 42px;
+        font-size: 17px;
+    }
+
+}
+
+/* =============== */
+.linkdin-icon{
+position: absolute;
+margin-left: 120px;
+}
+.whatsApp-icon{
+position: absolute;
+margin-left: 180px;
+}
+.instagram-icon{
+    position: absolute;
+margin-left: 240px;
+}
+.last-name-ali{
+position: absolute;
+right: 80px;
+margin-top: 40px;
+}
+.last-name-ali h1{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+color: #fff;
+}
+.last-name-ali p{
+font-size: 20px;
+font-family: Arial, Helvetica, sans-serif;
+font-weight: 600;
+padding-top: 20px;
+color: #fff;
+
+}
+
+/* =========================================
+   FOOTER RESPONSIVE
+========================================= */
+
+@media (max-width: 900px) {
+
+    .last-cont-logo {
+        width: 100%;
+        height: auto;
+        min-height: 180px;
+
+        padding: 30px 25px;
+        box-sizing: border-box;
+
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+
+    /* NAME + EMAIL */
+    .last-name-ali {
+        position: relative;
+
+        right: auto;
+        margin: 0;
+
+        text-align: left;
+    }
+
+    .last-name-ali h1 {
+        font-size: 18px;
+        margin: 0;
+    }
+
+    .last-name-ali p {
+        font-size: 16px;
+
+        padding-top: 12px;
+        margin: 0;
+    }
+
+
+    /* SOCIAL ICONS */
+    .last-icon-aa {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+
+        gap: 12px;
+    }
+
+
+    /* REMOVE ABSOLUTE POSITION */
+    .linkdin-icon,
+    .whatsApp-icon,
+    .instagram-icon {
+        position: relative;
+
+        margin-left: 0;
+    }
+
+
+    .last-icon-aa a {
+        width: 45px;
+        height: 45px;
+
+        font-size: 18px;
+    }
+}
+
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 600px) {
+
+    .last-cont-logo {
+        width:100%;
+        min-height: 240px;
+
+        padding: 30px 20px;
+
+        display: flex;
+        flex-direction: column;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 25px;
+
+        text-align: center;
+    }
+
+
+    /* NAME */
+    .last-name-ali {
+        position: relative;
+
+        right: auto;
+        margin: 0;
+
+        width: 100%;
+
+        text-align: center;
+    }
+
+
+    .last-name-ali h1 {
+        font-size: 17px;
+
+        margin: 0;
+
+        white-space: normal;
+    }
+
+
+    .last-name-ali p {
+        font-size: 15px;
+
+        padding-top: 10px;
+
+        margin: 0;
+
+        word-break: break-word;
+    }
+
+
+    /* SOCIAL ICONS */
+    .last-icon-aa {
+        position: relative;
+
+        left: auto;
+        bottom: auto;
+
+        padding: 0;
+
+        display: flex;
+        flex-direction: row;
+
+        justify-content: center;
+        align-items: center;
+
+        gap: 12px;
+    }
+
+
+    /* ICON CONTAINERS */
+    .linkdin-icon,
+    .whatsApp-icon,
+    .instagram-icon {
+        position: relative;
+
+        margin-left: 0;
+    }
+
+
+    /* ICON */
+    .last-icon-aa a {
+        width: 44px;
+        height: 44px;
+
+        font-size: 18px;
+
+        border-radius: 50%;
+    }
+
+
+    .last-icon-aa a:hover {
+        transform: translateY(-4px);
+    }
+}
+
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 400px) {
+
+    .last-cont-logo {
+        min-height: 220px;
+
+        padding: 25px 15px;
+
+        gap: 20px;
+    }
+
+
+    .last-name-ali h1 {
+        font-size: 15px;
+    }
+
+
+    .last-name-ali p {
+        font-size: 14px;
+    }
+
+
+    .last-icon-aa {
+        gap: 10px;
+    }
+
+
+    .last-icon-aa a {
+        width: 40px;
+        height: 40px;
+
+        font-size: 16px;
+    }
+}
+
+
+
+/* ================================================================ lasy section =============== */
+.chack-icon{
+position: absolute;
+padding-top: 100px;
+right: 1510px;
+}
+
+/* ==============================
+   MOBILE SOCIAL ICONS
+================================ */
+
+@media (max-width: 600px) {
+
+    .chack-icon {
+        position: relative;
+       
+        padding-top: 20px;
+        right: auto;
+
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .social-links {
+        display: none;
+        
+    }
+
+    .control-icon{
+position: absolute;
+
+margin-top: 830px;
+}
+/* .controlsocial-icon{
+position: absolute;
+right: 960px;
+margin-top: 500px;
+} */
+
+}
+
+
+/* ==============================
+   SMALL MOBILE
+================================ */
+
+@media (max-width: 400px) {
+
+    .chack-icon {
+        padding-top: 15px;
+    }
+
+    .social-links {
+        gap: 10px;
+    }
+
+    .social-links a {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+    }
+
+}
