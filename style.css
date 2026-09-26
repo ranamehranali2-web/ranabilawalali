@@ -3452,3 +3452,51 @@ margin-top: 500px;
     }
 
 }
+/* Resume Button */
+.cv-button a {
+    display: inline-block;
+    padding: 12px 28px;
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+    border-radius: 8px;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+/* Hover Effect */
+.cv-button a:hover {
+    background: #ffffff;
+    color: #000000;
+    transform: translateY(-3px);
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
+}
+
+/* Click Effect */
+.cv-button a:active {
+    transform: translateY(-1px);
+}
+
+/* Responsive - Tablet */
+@media (max-width: 768px) {
+    .cv-button a {
+        padding: 10px 22px;
+        font-size: 15px;
+    }
+}
+
+/* Responsive - Mobile */
+@media (max-width: 480px) {
+    .cv-button {
+        text-align: center;
+    }
+
+    .cv-button a {
+        padding: 10px 20px;
+        font-size: 14px;
+        width: auto;
+    }
+}
