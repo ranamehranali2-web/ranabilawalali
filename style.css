@@ -3457,20 +3457,21 @@ margin-top: 500px;
     display: inline-block;
     padding: 12px 28px;
     background: transparent;
-    color: #ffffff;
-    border: 2px solid #ffffff;
+    color: #3044b8;
+    border: 2px solid #3048bd;
     border-radius: 8px;
     text-decoration: none;
     font-size: 16px;
     font-weight: 600;
     transition: all 0.3s ease;
     cursor: pointer;
+    background-color: #68758b;
 }
 
 /* Hover Effect */
 .cv-button a:hover {
-    background: #ffffff;
-    color: #000000;
+    background: #3048bd;
+    color: #ddd;
     transform: translateY(-3px);
     box-shadow: 0 8px 20px rgba(255, 255, 255, 0.25);
 }
